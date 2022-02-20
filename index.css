@@ -3,16 +3,16 @@ body {
     font-family: monospace;
   }
   
-  #toy-header {
+  #bar-header {
     display: flex;
     justify-content: center;
-    background: #515DA2;
-    opacity: .8;
+    background: #3f1c05;
+    opacity: 1;
     height: 7rem;
     padding: 1rem;
   }
   
-  #toy-header img {
+  #toy-bar img {
     height: 6rem;
     width: auto;
   }
@@ -40,7 +40,7 @@ body {
   
   button {
     position: relative;
-    background-color: #e04b52;
+    background-color: #5c291a;
     border: none;
     border-radius: 5px;
     height: 3rem;
@@ -52,8 +52,8 @@ body {
   
   button:hover {
     background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
+    border: #5c291a solid 1px;
+    color: #5c291a;
   }
   
   .container {
