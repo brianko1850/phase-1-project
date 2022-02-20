@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: monospace;
+    background-color: rgb(110, 107, 107);
   }
   
   #bar-header {
@@ -12,12 +13,12 @@ body {
     padding: 1rem;
   }
   
-  #toy-bar img {
+  #drink-bar img {
     height: 6rem;
     width: auto;
   }
   
-  #toy-collection {
+  #drink-collection {
     margin: 2rem;
   }
   
@@ -29,10 +30,10 @@ body {
     height: 25rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #e04b52
+    box-shadow: 3px 4px #360c0e
   }
   
-  .toy-avatar {
+  .drink-avatar {
     justify-self: center;
     height: 12rem;
     width: auto;
@@ -82,10 +83,13 @@ body {
     margin: 3px;
   }
   
+  h3 {
+      color:whitesmoke
+  }
   .submit:hover {
     background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
+    border: #3f1c05 solid 1px;
+    color: #3f1c05;
   }
   
   
