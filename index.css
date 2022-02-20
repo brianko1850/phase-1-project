@@ -61,17 +61,17 @@ body {
     width: stretch;
     height: auto;
     display: none;
-    background: #515DA2;
-    opacity: .8;
+    background: #3f1c05;
+    opacity: 1;
   }
   
-  .add-toy-form {
+  .add-drink-form {
     width: 80%
   }
   
   .submit {
     position: relative;
-    background-color: #e04b52;
+    background-color: #5c291a;
     border-radius: 5px;
     height: 2rem;
     width: max-content;
