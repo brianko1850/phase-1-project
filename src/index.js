@@ -38,8 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
   function getDrinks(){
       fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
       .then(res => res.json())
-      .then(drinks => Object.entries(drinks).forEach(element => console.log(element)))
-  }
+      .then(drinks => Object.entries(drinks).reduce((acc, [ key, value ]) => {
+          Object.values(value).forEach((drinks, i) => {
+            if (!acc[i]) acc[i] = { };
+      acc[i][key] = data;
+    });
+    return acc;
+  }, {  })).forEach(drink => renderDrinks(drink))
+      }
 
   document.querySelector('.add-drink-form').addEventListener('submit', handleSubmit)
   
