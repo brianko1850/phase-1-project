@@ -14,6 +14,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  function renderDrinks(drink) {
+
+    let card = document.createElement('li')
+    card.className = 'card'
+    card.innerHTML = `
+    <img src="${drink.strDrinkThumb}">
+    <div class="content">
+    <h4>${drink.strDrink}</h4>
+    <ul>
+        <li>${drink.strIngredient1}</li>
+        <li>${drink.strIngredient2}</li>
+        <li>${drink.strIngredient3}</li>
+        <li>${drink.strIngredient4}</li>
+    </ul>
+    <p>${drink.strInstructions}</p>
+    <div>
+    `
+    document.querySelector('#drink-collection').appendChild(card)
+
+  }
+
   function getDrinks(){
       fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
       .then(res => res.json())
