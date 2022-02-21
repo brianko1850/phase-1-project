@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function getDrinks(){
       fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
       .then(res => res.json())
-      .then(drinks => console.log(drinks))
+      .then(drinks => Object.entries(drinks).forEach(element => console.log(element)))
   }
 
   document.querySelector('.add-drink-form').addEventListener('submit', handleSubmit)
