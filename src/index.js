@@ -13,3 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  function getDrinks(){
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
+      .then(res => res.json())
+      .then(drinks => console.log(drinks))
+  }
+
+  document.querySelector('.add-drink-form').addEventListener('submit', handleSubmit)
+  
+  function handleSubmit(e){
+      e.prev
+  }
