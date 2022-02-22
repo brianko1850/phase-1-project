@@ -1,6 +1,7 @@
 let addDrink = false;
 
 document.addEventListener("DOMContentLoaded", () => {
+  getDrinks()
     const addBtn = document.querySelector("#new-drink-btn");
     const drinkFormContainer = document.querySelector(".container");
     addBtn.addEventListener("click", () => {
@@ -19,13 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let card = document.createElement('li')
     card.className="card"
     card.innerHTML = `
-    <div class="card">
+  
       <img src="${drink.image}" class="card-img">
       <div class="content">
       <h4>${drink.name}</h4>
       <p>${drink.preparation}</p>
       </div>
-    </div>
+    
     `
     document.querySelector('#drink-collection').appendChild(card)
 
