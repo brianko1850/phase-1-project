@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function getDrinks(){
       fetch('http://localhost:3000/cocktails')
       .then(res => res.json())
-      .then(drinks => console.log(drinks))
+      .then(drinks => drinks.forEach(drink => getDrinks(drink))
   }
 
   document.querySelector('.add-drink-form').addEventListener('submit', handleSubmit)
