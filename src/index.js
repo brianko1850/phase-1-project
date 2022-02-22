@@ -41,5 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector('.add-drink-form').addEventListener('submit', handleSubmit)
   
   function handleSubmit(e){
-      e.prev
+      e.preventDefault()
+
+      let drinkObj = {
+
+        image:e.target.querySelector("#inputDrinkImg").value,
+        name:e.target.querySelector("#inputDrink").value,
+        preparation:e.target.querySelector("#recipe").value
+      }
+      renderDrinks(drinkObj)
   }
