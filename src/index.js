@@ -17,13 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderDrinks(drink) {
 
     let card = document.createElement('li')
-    card.className = 'card'
+    card.className="card"
     card.innerHTML = `
-    <img src="${drink.image}">
-    <div class="content">
-    <h4>${drink.name}</h4>
-    <p>${drink.preparation}</p>
-    <div>
+    <div class="card">
+      <img src="${drink.image}" class="card-img">
+      <div class="content">
+      <h4>${drink.name}</h4>
+      <p>${drink.preparation}</p>
+      </div>
+    </div>
     `
     document.querySelector('#drink-collection').appendChild(card)
 
@@ -32,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function getDrinks(){
       fetch('http://localhost:3000/cocktails')
       .then(res => res.json())
-      .then(drinks => drinks.forEach(drink => getDrinks(drink))
+      .then(drinks => drinks.forEach(drink => renderDrinks(drink)))
   }
 
   document.querySelector('.add-drink-form').addEventListener('submit', handleSubmit)

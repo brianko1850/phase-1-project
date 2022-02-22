@@ -33,6 +33,13 @@ body {
     box-shadow: 3px 4px #360c0e
   }
   
+  .card-img img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+
   .drink-avatar {
     justify-self: center;
     height: 12rem;
