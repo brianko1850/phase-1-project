@@ -19,16 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let card = document.createElement('li')
     card.className = 'card'
     card.innerHTML = `
-    <img src="${drink.strDrinkThumb}">
+    <img src="${drink.image}">
     <div class="content">
-    <h4>${drink.strDrink}</h4>
-    <ul>
-        <li>${drink.strIngredient1}</li>
-        <li>${drink.strIngredient2}</li>
-        <li>${drink.strIngredient3}</li>
-        <li>${drink.strIngredient4}</li>
-    </ul>
-    <p>${drink.strInstructions}</p>
+    <h4>${drink.name}</h4>
+    <p>${drink.preparation}</p>
     <div>
     `
     document.querySelector('#drink-collection').appendChild(card)
@@ -36,16 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getDrinks(){
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
+      fetch('http://localhost:3000/cocktails')
       .then(res => res.json())
-      .then(drinks => Object.entries(drinks).reduce((acc, [ key, value ]) => {
-          Object.values(value).forEach((drinks, i) => {
-            if (!acc[i]) acc[i] = { };
-      acc[i][key] = data;
-    });
-    return acc;
-  }, {  })).forEach(drink => renderDrinks(drink))
-      }
+      .then(drinks => console.log(drinks))
+  }
 
   document.querySelector('.add-drink-form').addEventListener('submit', handleSubmit)
   
