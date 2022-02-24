@@ -12,6 +12,7 @@ User can also input cocktail name, image url and short recipe to make additional
  - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
  - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ - [original DB] (https://gist.github.com/renandanton/8d99dab65bf9fb5b4465ded7ab73a7df)
 
 
 
