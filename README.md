@@ -16,8 +16,17 @@ User can also input cocktail name, image url and short recipe to make additional
 
 
 ## Usage
+-Callback Fn renderDrinks() creates and appends drink cards with drink image, name and short recipe
+-Fn getDrinks() fetches data from JSON file, converts to JSON objects and runs them through renderDrinks
+-Fn handleSubmit() takes input and runs them through renderDrinks() and appends new card to the page
 
 
+## Roadmap
+
+-Integrating bigger database
+-POST
+-search function
+-rating system for cocktails
 
 ## Demo
 
