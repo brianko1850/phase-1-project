@@ -35,5 +35,5 @@ Insert video link later
 
 ## Links
 
-https://github.com/brianko1850/phase-1-project
-https://dev.to/brianko1850/phase-1-project-lhc
+repository: https://github.com/brianko1850/phase-1-project
+blog: https://dev.to/brianko1850/phase-1-project-lhc
