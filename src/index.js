@@ -1,6 +1,7 @@
 let addDrink = false;
 
 document.addEventListener("DOMContentLoaded", () => {
+  getDrinks()
     const addBtn = document.querySelector("#new-drink-btn");
     const drinkFormContainer = document.querySelector(".container");
     addBtn.addEventListener("click", () => {
@@ -17,38 +18,36 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderDrinks(drink) {
 
     let card = document.createElement('li')
-    card.className = 'card'
+    card.className="card"
     card.innerHTML = `
-    <img src="${drink.strDrinkThumb}">
-    <div class="content">
-    <h4>${drink.strDrink}</h4>
-    <ul>
-        <li>${drink.strIngredient1}</li>
-        <li>${drink.strIngredient2}</li>
-        <li>${drink.strIngredient3}</li>
-        <li>${drink.strIngredient4}</li>
-    </ul>
-    <p>${drink.strInstructions}</p>
-    <div>
+  
+      <img src="${drink.image}" class="card-img">
+      <div class="content">
+      <h4>${drink.name}</h4>
+      <p>${drink.preparation}</p>
+      </div>
+    
     `
     document.querySelector('#drink-collection').appendChild(card)
 
   }
 
   function getDrinks(){
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
+      fetch('http://localhost:3000/cocktails')
       .then(res => res.json())
-      .then(drinks => Object.entries(drinks).reduce((acc, [ key, value ]) => {
-          Object.values(value).forEach((drinks, i) => {
-            if (!acc[i]) acc[i] = { };
-      acc[i][key] = data;
-    });
-    return acc;
-  }, {  })).forEach(drink => renderDrinks(drink))
-      }
+      .then(drinks => drinks.forEach(drink => renderDrinks(drink)))
+  }
 
   document.querySelector('.add-drink-form').addEventListener('submit', handleSubmit)
   
   function handleSubmit(e){
-      e.prev
+      e.preventDefault()
+
+      let drinkObj = {
+
+        image:e.target.querySelector("#inputDrinkImg").value,
+        name:e.target.querySelector("#inputDrink").value,
+        preparation:e.target.querySelector("#recipe").value
+      }
+      renderDrinks(drinkObj)
   }

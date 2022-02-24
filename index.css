@@ -21,7 +21,16 @@ body {
   #drink-collection {
     margin: 2rem;
   }
-  
+
+  .card-img {
+    margin-left: 30px;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 5px solid #272133;
+    margin-top: 20px;
+    box-shadow: 0 10px 50px #360c0e
+  }
   .card {
     text-align: center;
     border: grey solid 1px;
@@ -33,6 +42,8 @@ body {
     box-shadow: 3px 4px #360c0e
   }
   
+
+
   .drink-avatar {
     justify-self: center;
     height: 12rem;
@@ -101,4 +112,11 @@ body {
     font-family: monospace;
     margin: 3px;
   }
-  
+  .input-URL {
+    border-radius: 5px;
+    height: 2rem;
+    width: 60%;
+    font-size: 18px;
+    font-family: monospace;
+    margin: 3px;
+  }
