@@ -1,6 +1,6 @@
-# Phase-1-project
+# phase-1-project
 
-This is a single page application with html, CSS and javascript component.
+This is the phase one project 
 
 ## drink-recipes
 
