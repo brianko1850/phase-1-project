@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderDrinks(drink) {
-  const foo      = drink
   let card = document.createElement('li')
   card.className="card"
   card.innerHTML = `
