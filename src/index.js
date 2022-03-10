@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     addDrink = !addDrink;
     if (addDrink) {
-      drinkFormContainer.style.display = "blocsk";
+      drinkFormContainer.style.display = "block";
     } else {
       drinkFormContainer.style.display = "none";
     }
