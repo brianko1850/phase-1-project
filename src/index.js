@@ -37,14 +37,9 @@ let drinkList = []
 function getDrinks(){
   fetch('http://localhost:3000/cocktails')
   .then(res => res.json())
-  .then(drinks => { 
-    drinkList = drinks;
-    return drinks.forEach(drink => renderDrinks(drink))
-  })
+  .then(drinks => drinks.forEach(drink => renderDrinks(drink)))
   .catch(error => console.log(error))
 }
-
-console.log(drinkList)
 
 
 function handleSubmit(e){
