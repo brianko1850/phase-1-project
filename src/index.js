@@ -39,6 +39,7 @@ function getDrinks(){
   .then(res => res.json())
   .then(drinks => drinks.forEach(drink => renderDrinks(drink)))
   .catch(error => console.log(error))
+
 }
 
 
