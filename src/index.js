@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     addDrink = !addDrink;
     if (addDrink) {
-      drinkFormContainer.style.display = "block";
+      drinkFormContainer.style.display = "blocsk";
     } else {
       drinkFormContainer.style.display = "none";
     }
@@ -32,11 +32,19 @@ function renderDrinks(drink) {
   document.querySelector('#drink-collection').appendChild(card)
 }
 
+let drinkList = []
+
 function getDrinks(){
   fetch('http://localhost:3000/cocktails')
   .then(res => res.json())
-  .then(drinks => drinks.forEach(drink => renderDrinks(drink)))
+  .then(drinks => { 
+    drinkList = drinks;
+    return drinks.forEach(drink => renderDrinks(drink))
+  })
+  .catch(error => console.log(error))
 }
+
+console.log(drinkList)
 
 
 function handleSubmit(e){
@@ -50,3 +58,4 @@ function handleSubmit(e){
   }
   renderDrinks(drinkObj)
 }
+
